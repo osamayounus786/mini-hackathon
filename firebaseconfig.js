@@ -1,9 +1,6 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+import { getFirestore} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
 const firebaseConfig = {
   apiKey: "AIzaSyDb5A5Ab4KqWKqNn9vLuwxmCO5pDKRkx00",
   authDomain: "mini-hackathon-11294.firebaseapp.com",
@@ -15,3 +12,4 @@ const firebaseConfig = {
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);

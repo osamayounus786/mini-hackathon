@@ -1,5 +1,10 @@
-.container-fluid{
-    /* height: 100vh; */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  /* user-select: none; */
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 .container{
@@ -127,3 +132,6 @@
  
 
 /* form field */
+.container{
+  margin-top: 30px;
+}
