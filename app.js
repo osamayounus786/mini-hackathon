@@ -1,6 +1,8 @@
 import {app} from "./firebaseconfig.js"
 import {db} from "./firebaseconfig.js"
-import { collection, addDoc,getDocs, setDoc, doc } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js"; 
+import { collection, addDoc,getDocs,where,query, setDoc, doc } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js"; 
+
+
 
 let clstime = document.querySelector("#clstime");
 let clsschedule = document.querySelector("#clsschedule");
@@ -24,7 +26,7 @@ async function classButton(){
  
 const classRef = collection(db, "Class");
 
-await setDoc(doc(classRef, "Sir Haider"), {
+await addDoc(classRef,  {
     ClassTime: clstime.value,
           ClassSchedule: clsschedule.value,
            TeacherName:tchName.value,
@@ -42,3 +44,40 @@ await setDoc(doc(classRef, "Sir Haider"), {
 
       
 }
+
+
+// let collectionRef = collection(db, "Class");
+//   let condition = where("RollNum", "==", "98");
+
+//   const q = query(collectionRef, condition);
+//   let usersSnapshot = await getDocs(q);
+//   usersSnapshot.forEach((doc) => {
+//     // console.log(doc.data());
+//     console.log(doc.data());
+//     // secB.addEventListener("click", () => doc.data());
+//     // secC.addEventListener("click", () => doc.data());
+//   });
+//   console.log("other User");
+
+
+  let searchUser = document.querySelector("#searchUser");
+  searchUser.addEventListener("click",finduser);
+
+  async function finduser(){
+    let collectionRef = collection(db, "Class");
+    let userInput = document.querySelector("#userInput");
+    let condition = where("RollNum", "==", userInput.value);
+
+    
+    const q = query(collectionRef, condition);
+    let usersSnapshot = await getDocs(q);
+    usersSnapshot.forEach((doc) => {
+      // console.log(doc.data());
+      let showData = document.querySelector("#showData");
+      showData.innerHTML = doc.data();
+      console.log(doc.data());
+      // secB.addEventListener("click", () => doc.data());
+      // secC.addEventListener("click", () => doc.data());
+    });
+    console.log("other User");
+  }
