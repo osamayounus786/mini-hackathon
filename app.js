@@ -1,9 +1,10 @@
 import {app} from "./firebaseconfig.js"
 import {db} from "./firebaseconfig.js"
 import { collection, addDoc,getDocs,where,query, setDoc, doc } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js"; 
+import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
 
 
-
+const auth = getAuth(app);
 let clstime = document.querySelector("#clstime");
 let clsschedule = document.querySelector("#clsschedule");
 let tchName = document.querySelector("#tchName");
@@ -84,7 +85,10 @@ await addDoc(classRef,  {
       cardFname.innerHTML = doc.data().FatherName;
       cardRoll.innerHTML = doc.data().RollNum;
       cardContact.innerHTML = doc.data().ContactNum;
-      userPic.innerHTML = doc.data().Picture;
+      // userPic.innerHTML = doc.data().Picture;
+
+      // let card1 = document.querySelector("#card1");
+      // card1.classList.add("myStyle");
 
       console.log(doc.data());
       // secB.addEventListener("click", () => doc.data());
@@ -92,3 +96,15 @@ await addDoc(classRef,  {
     });
     console.log("other User");
   }
+
+
+  let signOutBtn = document.querySelector("#LogOut");
+signOutBtn.addEventListener("click", logOut);
+async function logOut() {
+  signOut(auth).then(() => {
+    // Sign-out successful.
+    window.location = "signin.html"
+  }).catch((error) => {
+    // An error happened.
+  });
+}
