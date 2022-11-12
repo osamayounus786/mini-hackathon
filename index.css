@@ -198,3 +198,42 @@ color: white;
   padding: 5px 10px;
   margin-bottom: 3px;
 }
+
+/* card */
+
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 70%;
+  height: 70%;
+}
+
+.card1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.searchinput{
+  border: 1px dotted  #3498db;
+  border-radius: 5px;
+  padding: 7px 5px;
+}
+.container1 p{
+  padding-left: 10px;
+  padding-top: 5px;
+
+}
+
+#searchUser{
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+
+}
+#searchUser:hover{
+  background-color: #125785;
+}
+#userPic{
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+}

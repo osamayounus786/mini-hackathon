@@ -15,6 +15,7 @@ signInWithEmailAndPassword(auth, email.value, password.value)
     // Signed in 
     const user = userCredential.user;
     console.log("user login successfully",user);
+    window.location = "index.html";
     
     // ...
   })

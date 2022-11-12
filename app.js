@@ -73,8 +73,19 @@ await addDoc(classRef,  {
     let usersSnapshot = await getDocs(q);
     usersSnapshot.forEach((doc) => {
       // console.log(doc.data());
-      let showData = document.querySelector("#showData");
-      showData.innerHTML = doc.data();
+      
+      let cardName = document.querySelector("#cardName");
+      let cardFname = document.querySelector("#cardFname");
+      let cardRoll = document.querySelector("#cardRoll");
+      let cardContact = document.querySelector("#cardContact");
+      let userPic = document.querySelector("#userPic");
+      // showData.innerHTML = doc.data().RollNum;
+      cardName.innerHTML = doc.data().Name;
+      cardFname.innerHTML = doc.data().FatherName;
+      cardRoll.innerHTML = doc.data().RollNum;
+      cardContact.innerHTML = doc.data().ContactNum;
+      userPic.innerHTML = doc.data().Picture;
+
       console.log(doc.data());
       // secB.addEventListener("click", () => doc.data());
       // secC.addEventListener("click", () => doc.data());
