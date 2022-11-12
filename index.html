@@ -30,45 +30,91 @@
     </div>
 
     <div class="container">
-        <div class="text">Classes</div>
+        <div class="text">Class Details</div>
         <form action="#">
            <div class="form-row">
               <div class="input-data">
-                 <input type="text" required id="clstime">
+                 <input type="text"  id="clstime">
                  <div class="underline"></div>
                  <label for="">Class timings
                 </label>
               </div>
               <div class="input-data">
-                 <input type="text" required id="clsschedule">
+                 <input type="text"  id="clsschedule">
                  <div class="underline"></div>
                  <label for="">Schedule of classes</label>
               </div>
            </div>
            <div class="form-row">
               <div class="input-data">
-                 <input type="text" required id="tchName">
+                 <input type="text"  id="tchName">
                  <div class="underline"></div>
                  <label for="">Teachers Name</label>
               </div>
               <div class="input-data">
-                 <input type="text" required id="secName">
+                 <input type="text"  id="secName">
                  <div class="underline"></div>
                  <label for="">Section Name</label>
               </div>
            </div>
            <div class="form-row">
             <div class="input-data">
-               <input type="text" required id="courseName">
+               <input type="text"  id="courseName">
                <div class="underline"></div>
                <label for="">Course Name</label>
             </div>
             <div class="input-data">
-               <input type="text" required id="batchNum">
+               <input type="text"  id="batchNum">
                <div class="underline"></div>
                <label for="">Batch Number</label>
             </div>
          </div>
+
+            <p>Student Details</p>
+            <div class="form-row">
+                <div class="input-data">
+                   <input type="text"  id="name">
+                   <div class="underline"></div>
+                   <label for="">Name</label>
+                </div>
+                <div class="input-data">
+                   <input type="text"  id="fname">
+                   <div class="underline"></div>
+                   <label for="">Father Name</label>
+                </div>
+             </div>
+             <div class="form-row">
+                <div class="input-data">
+                   <input type="text"  id="rollNum">
+                   <div class="underline"></div>
+                   <label for="">Roll Number</label>
+                </div>
+                <div class="input-data">
+                   <input type="text"  id="cntctNum">
+                   <div class="underline"></div>
+                   <label for="">Contact Number</label>
+                </div>
+             </div>
+             <div class="form-row">
+                <div class="input-data">
+                   <input type="text"  id="cnicNum">
+                   <div class="underline"></div>
+                   <label for="">CNIC Number</label>
+                </div>
+                <div class="input-data">
+                   <input type="text"  id="stCourseName">
+                   <div class="underline"></div>
+                   <label for="">Course Name</label>
+                </div>
+             </div>
+
+             <div class="form-row">
+                <div class="input-data">
+                   <input type="file"  id="pic">
+                   <div class="underline"></div>
+                   <label for="">Picture</label>
+                </div>
+             </div>
 
            <div class="form-row">
               <div class="input-data">
@@ -88,8 +134,25 @@
      </div>
 
 
+     <!-- atttendancing marking -->
+     <div class="container">
+      <div class="row">
+         <div class="col col-lg-4">
+            <p>select the particular courses class for attendance</p>
+            <div class="dropdown">
+               <button class="dropbtn">Dropdown</button>
+               <div class="dropdown-content">
+                 <a href="#">Link 1</a>
+                 <a href="#">Link 2</a>
+                 <a href="#">Link 3</a>
+               </div>
+             </div>
+         </div>
+      </div>
+     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-     <script src="app.js"></script>
+     <script src="app.js" type="module"></script>
 </body>
 </html>
 
