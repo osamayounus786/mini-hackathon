@@ -238,3 +238,18 @@ color: white;
   border-radius: 50%;
 }
 
+.heading{
+  color: #3498db;
+}
+.green{
+  color: #04AA6D;
+}
+.blue{
+  color: #56d8e4;
+}
+.yellow{
+  color: #e7e70c;
+}
+.red{
+  color: rgb(186, 40, 40);
+}
